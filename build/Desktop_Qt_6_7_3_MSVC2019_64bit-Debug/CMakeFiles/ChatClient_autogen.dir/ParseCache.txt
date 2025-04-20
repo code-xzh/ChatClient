@@ -152,6 +152,7 @@ D:/code/chatsystem/ChatItem/ChatClient/mainwindow.h
  mdp:E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qwidget.h
+D:/code/chatsystem/ChatItem/ChatClient/main.cpp
 D:/code/chatsystem/ChatItem/ChatClient/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/code/chatsystem/ChatItem/ChatClient/main.cpp
+D:/code/chatsystem/ChatItem/ChatClient/model/data.h
