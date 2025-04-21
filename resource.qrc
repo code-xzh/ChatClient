@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/Image/apply_active.png</file>
+        <file>resource/Image/apply_inactive.png</file>
+        <file>resource/Image/checked.png</file>
+        <file>resource/Image/cross.png</file>
+        <file>resource/Image/defaultAvatar.png</file>
+        <file>resource/Image/file.png</file>
+        <file>resource/Image/friend_active.png</file>
+        <file>resource/Image/friend_inactive.png</file>
+        <file>resource/Image/groupAvatar.png</file>
+        <file>resource/Image/more.png</file>
+        <file>resource/Image/search.png</file>
+        <file>resource/Image/session_active.png</file>
+        <file>resource/Image/session_inactive.png</file>
+        <file>resource/Image/sound.png</file>
+        <file>resource/Image/sound_active.png</file>
+        <file>resource/Image/submit.png</file>
+        <file>resource/Image/unchecked.png</file>
+        <file>resource/Image/logo.png</file>
+    </qresource>
+</RCC>
