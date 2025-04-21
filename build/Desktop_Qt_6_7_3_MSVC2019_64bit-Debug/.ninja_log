@@ -1,0 +1,12 @@
+# ninja log v6
+14	356	7669507282096952	ChatClient_autogen/timestamp	3c82ef8f8d300c8d
+14	356	7669507282096952	ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
+14	356	7669507282096952	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp	3c82ef8f8d300c8d
+14	356	7669507282096952	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
+361	497	7669507284095141	ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp	c66a9fb39b002e52
+361	497	7669507284095141	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp	c66a9fb39b002e52
+515	905	7669507284405034	CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp.obj	4973b12ceec7d1e8
+497	2189	7669507284227799	CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj	517597c0c4a06230
+508	2196	7669507284340184	CMakeFiles/ChatClient.dir/widget.cpp.obj	99cc6cb46aee69c1
+502	2224	7669507284276966	CMakeFiles/ChatClient.dir/main.cpp.obj	6cb0bd0dfcba1af3
+2225	2720	7669507301507462	ChatClient.exe	26dc15393320c094

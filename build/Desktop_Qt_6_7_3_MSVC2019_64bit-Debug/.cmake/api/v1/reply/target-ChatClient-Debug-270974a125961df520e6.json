@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 61,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 44,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
@@ -368,18 +368,19 @@
 			[
 				0,
 				1,
-				2
+				2,
+				7
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "ChatClient_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "ChatClient_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "ChatClient_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "ChatClient::@6890427a1f51a3e7e1df",
@@ -486,28 +487,38 @@
 			[
 				0,
 				1,
-				2
+				2,
+				7
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				3
+				3,
+				4
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				5
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4
+				6
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				5
+				8,
+				9
 			]
 		}
 	],
@@ -538,16 +549,39 @@
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp",
+			"backtrace" : 4,
+			"path" : "model/data.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "resource.qrc",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp.rule",
+			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp",
 			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp.rule",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp.rule",
+			"sourceGroupIndex" : 4
 		}
 	],
 	"type" : "EXECUTABLE"

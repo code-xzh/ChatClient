@@ -311,7 +311,8 @@
 		"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake",
 		"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake",
-		"E:/qt6/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"
+		"E:/qt6/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
+		"D:/code/chatsystem/ChatItem/ChatClient/resource.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/code/chatsystem/ChatItem/ChatClient",
 	"CROSS_CONFIG" : false,
