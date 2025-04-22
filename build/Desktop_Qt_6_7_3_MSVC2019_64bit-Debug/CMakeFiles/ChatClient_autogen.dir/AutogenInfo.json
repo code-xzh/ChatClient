@@ -321,9 +321,21 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/debug.h",
+			"MU",
+			"EWIEGA46WW/moc_debug.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/model/data.h",
 			"MU",
 			"NLOY5YBGEN/moc_data.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.h",
+			"MU",
+			"EWIEGA46WW/moc_sessionfriendarea.cpp",
 			null
 		],
 		[
@@ -389,6 +401,11 @@
 	"SOURCES" : 
 	[
 		[ "D:/code/chatsystem/ChatItem/ChatClient/main.cpp", "MU", null ],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.cpp",
+			"MU",
+			null
+		],
 		[ "D:/code/chatsystem/ChatItem/ChatClient/widget.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

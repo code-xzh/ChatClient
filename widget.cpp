@@ -1,6 +1,7 @@
 #include "widget.h"
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include "sessionfriendarea.h"
 Widget* Widget::_instance=nullptr;
 Widget* Widget::getInstance()
 {
@@ -23,6 +24,8 @@ Widget::Widget(QWidget *parent)
     InitMidWindow();
     //初始化右侧窗口样式布局
     InitRightWindow();
+    //初始化信号槽
+    void initSignalSlot();
 }
 
 //初始化主窗口样式布局
@@ -92,14 +95,114 @@ void Widget::InitLeftWindow()
     layout->addWidget(_applyTabBtm,1,Qt::AlignTop | Qt::AlignHCenter);
 
     layout->addStretch(20);//下边距
+
+    initSignalSlot();
 }
 
 void Widget::InitMidWindow()
 {
+    //网格布局
+    QGridLayout* layout=new QGridLayout();
+    layout->setContentsMargins(0,20,0,0);//上方距离20
+    layout->setHorizontalSpacing(0);
+    layout->setVerticalSpacing(10);
+    _windowMid->setLayout(layout);
 
+    _searchEdit = new QLineEdit();
+    _searchEdit->setFixedHeight(30);
+    _searchEdit->setPlaceholderText("搜索");//提示文字
+    _searchEdit->setStyleSheet("QLineEdit { border-radius: 5px;background-color:rgb(226,226,226);padding-left:5px;}");//边框圆角+颜色+内边距
+
+    _addFriendBtn=new QPushButton();
+    _addFriendBtn->setFixedSize(30,30);
+    _addFriendBtn->setIcon(QIcon(":/resource/Image/cross.png"));
+    QString style="QPushButton { border-radius: 5px;background-color:rgb(226,226,226);}";
+    style+= "QPushButto::pressed {background-color:rgb(240,240,240);}";
+    _addFriendBtn->setStyleSheet(style);
+
+    SessionFriendArea* sessionFriendArea=new SessionFriendArea();
+
+    //控制边距，可以创建空白widget填充到布局管理器中
+    QWidget* space1=new QWidget;
+    space1->setFixedWidth(10);
+    QWidget* space2=new QWidget;
+    space2->setFixedWidth(10);
+    QWidget* space3=new QWidget;
+    space3->setFixedWidth(10);
+
+    layout->addWidget(space1,0,0);
+    layout->addWidget(_searchEdit,0,1);
+    layout->addWidget(space2,0,2);
+    layout->addWidget(_addFriendBtn,0,3);
+    layout->addWidget(space3,0,4);
+    layout->addWidget(sessionFriendArea,1,0,1,5);
 }
 
 void Widget::InitRightWindow()
+{
+
+}
+
+void Widget::initSignalSlot()
+{
+    //////////////////////////////////////////////
+    /////连接信号槽，处理标签切换
+    //////////////////////////////////////////////
+
+    connect(_sessionTabBtm,&QPushButton::clicked,this,&Widget::switchTatoSession);
+    connect(_friendTabBtm,&QPushButton::clicked,this,&Widget::switchTatoFriend);
+    connect(_applyTabBtm,&QPushButton::clicked,this,&Widget::switchTatoApply);
+
+}
+
+void Widget::switchTatoSession()
+{
+    //1.记录当前切换到了哪个标签页
+    _activetable=SESSION_LIST;
+    //2.调整当前图表显示情况,把会话设为active。另外俩设为inactive
+    _sessionTabBtm->setIcon(QIcon(":/resource/Image/session_active.png"));
+    _friendTabBtm->setIcon(QIcon(":/resource/Image/friend_inactive.png"));
+    _applyTabBtm->setIcon(QIcon(":/resource/Image/apply_inactive.png"));
+    //3.在主窗口中间部分加载出会话列表数据
+    this->loadSessionList();
+
+}
+
+void Widget::switchTatoFriend()
+{
+    //1.记录当前切换到了哪个标签页
+    _activetable=FRIEND_LIST;
+    //2.调整当前图表显示情况,把会话设为active。另外俩设为inactive
+    _sessionTabBtm->setIcon(QIcon(":/resource/Image/session_inactive.png"));
+    _friendTabBtm->setIcon(QIcon(":/resource/Image/friend_active.png"));
+    _applyTabBtm->setIcon(QIcon(":/resource/Image/apply_inactive.png"));
+    //3.在主窗口中间部分加载出会话列表数据
+    this->loadFriendList();
+}
+
+void Widget::switchTatoApply()
+{
+    //1.记录当前切换到了哪个标签页
+    _activetable=APPLY_LIST;
+    //2.调整当前图表显示情况,把会话设为active。另外俩设为inactive
+    _sessionTabBtm->setIcon(QIcon(":/resource/Image/session_inactive.png"));
+    _friendTabBtm->setIcon(QIcon(":/resource/Image/friend_inactive.png"));
+    _applyTabBtm->setIcon(QIcon(":/resource/Image/apply_active.png"));
+    //3.在主窗口中间部分加载出会话列表数据
+    this->loadApplyList();
+}
+
+void Widget::loadSessionList()
+{
+
+}
+
+void Widget::loadFriendList()
+{
+
+}
+
+void Widget::loadApplyList()
 {
 
 }
