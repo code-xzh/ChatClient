@@ -2,11 +2,11 @@
 #include <QScrollBar>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include <QLabel>
 #include <QStyleOption>
 #include <QPainter>
 
 #include "debug.h"
+#include "model/data.h"
 
 SessionFriendArea::SessionFriendArea(QWidget *parent)
     : QScrollArea{parent}
@@ -42,7 +42,7 @@ SessionFriendArea::SessionFriendArea(QWidget *parent)
     QIcon icon(":/resource/Image/defaultAvatar.png");
     for(int i=0;i<30;++i)
     {
-        this->addItem(icon,"张三"+QString::number(i),"最后消息"+QString::number(i));
+        this->addItem(APPLY_ITEM_TYPE,QString::number(i),icon,"张三"+QString::number(i),"最后消息"+QString::number(i));
     }
 #endif
 }
@@ -61,10 +61,39 @@ void SessionFriendArea::clear()
     }
 }
 
-void SessionFriendArea::addItem(const QIcon &avatar, const QString &name, const QString &text)
+//添加三个item的其中之一
+void SessionFriendArea::addItem(ItemType itemType,const QString& id,const QIcon &avatar, const QString &name, const QString &text)
 {
-    SessionFriendItem* item=new SessionFriendItem(this,avatar,name,text);
+    SessionFriendItem* item=nullptr;
+    if(itemType==SESSION_ITEM_TYPE)
+    {
+        item= new SessionItem(this,id,avatar,name,text);
+    }else if(itemType==FRIEND_ITEM_TYPE){
+        item= new FriendItem(this,id,avatar,name,text);
+    }else if(itemType==APPLY_ITEM_TYPE){
+        item= new ApplyItem(this,id,avatar,name);
+    }else{
+        LOG()<<"错误的ItemType！ItemType="<<itemType;
+    }
     _container->layout()->addWidget(item);
+}
+
+void SessionFriendArea::clickItem(int index)
+{
+    if(index<0||index>=_container->layout()->count())
+    {
+        LOG()<<"点击元素超出范围！index="<<index;
+        return;
+    }
+    QLayoutItem* layoutItem=_container->layout()->itemAt(index);
+
+    if(layoutItem==nullptr||layoutItem->widget()==nullptr)
+    {
+        LOG()<<"指定元素不存在！index="<<index;
+        return;
+    }
+    SessionFriendItem* item=dynamic_cast<SessionFriendItem*>(layoutItem->widget());
+    item->select();
 }
 
 //////////////////////////////////////////////////
@@ -99,14 +128,14 @@ SessionFriendItem::SessionFriendItem(QWidget *owner, const QIcon &avatar, const 
     nameLable->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Fixed);
 
     //创建消息预览的label
-    QLabel* messageLabel=new QLabel();
+    messageLabel=new QLabel();
     messageLabel->setText(text);
     messageLabel->setFixedHeight(35);
     messageLabel->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Fixed);
 
     layout->addWidget(avatarBtn,0,0,2,2);
-    layout->addWidget(nameLable,0,2,1,1);
-    layout->addWidget(messageLabel,1,2,1,1);
+    layout->addWidget(nameLable,0,2,1,8);
+    layout->addWidget(messageLabel,1,2,1,8);
 }
 
 void SessionFriendItem::paintEvent(QPaintEvent *)
@@ -168,4 +197,69 @@ void SessionFriendItem::select()
 
     this->setStyleSheet("QWidget {background-color:rgb(210,210,210);}");
     this->selected=true;
+
+    //调用active
+    this->active();
+}
+
+void SessionFriendItem::active()
+{
+    //不需要实现，子类会重写
+}
+
+//////////////////////////////////////////////////
+/// 会话的Item的实现
+//////////////////////////////////////////////////
+SessionItem::SessionItem(QWidget *owner, const QString &chatSessionId, const QIcon &avatar,const QString &name, const QString &lastMessage)
+    :SessionFriendItem(owner,avatar,name,lastMessage),
+    _chatSessionId(chatSessionId)
+{}
+
+void SessionItem::active()
+{
+    //TODO 加载历史消息列表
+    LOG()<<"点击了SessionItem触发的逻辑！chatSessionId"<<_chatSessionId;
+}
+
+//////////////////////////////////////////////////
+/// 好友Item的实现
+//////////////////////////////////////////////////
+FriendItem::FriendItem(QWidget *owner, const QString &userId, const QIcon &avatar, const QString &name, const QString &description)
+    :SessionFriendItem(owner,avatar,name,description),
+    _userId(userId)
+{}
+
+void FriendItem::active()
+{
+    //TODO 加载对应会话列表元素
+    LOG()<<"点击了FriendItem触发的逻辑！userId"<<_userId;
+}
+
+//////////////////////////////////////////////////
+/// 好友申请Item的实现
+//////////////////////////////////////////////////
+ApplyItem::ApplyItem(QWidget *owner, const QString &userId, const QIcon &avatar, const QString &name)
+    :SessionFriendItem(owner,avatar,name,""),
+    _userId(userId)
+{
+    //1.移除父类的messageLabel
+    QGridLayout* layout=dynamic_cast<QGridLayout*>(this->layout());
+    layout->removeWidget(messageLabel);
+    delete messageLabel;
+
+    //2.创建俩按钮
+    QPushButton* accpetBtn=new QPushButton();
+    accpetBtn->setText("同意");
+    QPushButton* rejectBtn=new QPushButton();
+    rejectBtn->setText("拒绝");
+
+    //3.添加到布局管理器中
+    layout->addWidget(accpetBtn,1,2,1,1);
+    layout->addWidget(rejectBtn,1,3,1,1);
+}
+
+void ApplyItem::active()
+{
+    //TODO
+    LOG()<<"点击了ApplyItem触发的逻辑！userId"<<_userId;
 }
