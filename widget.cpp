@@ -2,6 +2,8 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include "sessionfriendarea.h"
+
+#include "debug.h"
 Widget* Widget::_instance=nullptr;
 Widget* Widget::getInstance()
 {
@@ -140,7 +142,53 @@ void Widget::InitMidWindow()
 
 void Widget::InitRightWindow()
 {
+    //1.创建右侧窗口的布局管理器
+    QVBoxLayout* vlayout=new QVBoxLayout();
+    vlayout->setSpacing(0);
+    vlayout->setContentsMargins(0,0,0,0);
+    vlayout->setAlignment(Qt::AlignTop);
+    _windowRight->setLayout(vlayout);
 
+    //2.创建上方标题栏
+    QWidget* titleWidget=new QWidget();
+    titleWidget->setFixedHeight(62);
+    titleWidget->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Fixed);
+    titleWidget->setObjectName("titleWidget");
+    titleWidget->setStyleSheet("#titleWidget{border-bottom:1px solid rgb(230,230,230);border-left:1px solid rgb(230,230,230);}");
+    vlayout->addWidget(titleWidget);
+
+    //3.给标题栏添加标题label和一个按钮
+    QHBoxLayout* hlayout=new QHBoxLayout();
+    hlayout->setSpacing(0);
+    //标题和按钮左右间距20
+    hlayout->setContentsMargins(10,0,10,0);
+    titleWidget->setLayout(hlayout);
+
+    QLabel* sessionTitleLabel=new QLabel();
+    sessionTitleLabel->setStyleSheet("QLabel {font-size:22px;border-bottom:1px solid rgb(230,230,230);}");
+
+#if TEST_UI
+    //测试代码，后期从服务器获取
+    sessionTitleLabel->setText("这是会话标题");
+#endif
+
+    hlayout->addWidget(sessionTitleLabel);
+
+    QPushButton* extraBtn=new QPushButton();
+    extraBtn->setFixedSize(30,30);
+    extraBtn->setIconSize(QSize(30,30));
+    extraBtn->setIcon(QIcon(":/resource/Image/more.png"));
+    extraBtn->setStyleSheet("QPushButton{border:none;background-color:rgb(245,245,245);}QPushButton:pressed{background-color:rgb(220,220,220);}");
+    hlayout->addWidget(extraBtn);
+
+    //4.添加消息展示区
+    messageShowArea=new MessageShowArea();
+    vlayout->addWidget(messageShowArea);
+
+    //5.消息编辑区
+    messageEditArea =new MessageEditArea();
+    //确保消息编辑器，处于窗口下方
+    vlayout->addWidget(messageEditArea,0,Qt::AlignBottom);
 }
 
 void Widget::initSignalSlot()

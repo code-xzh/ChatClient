@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QLineEdit>
+#include "messageshowarea.h"
+#include "messageeditarea.h"
 
 class Widget : public QWidget
 {
@@ -28,6 +30,9 @@ private:
 
     QLineEdit* _searchEdit;//用户搜索框
     QPushButton* _addFriendBtn;//加好友按钮
+
+    MessageShowArea* messageShowArea;//消息展示区
+    MessageEditArea* messageEditArea;//消息编辑区
 
     enum ActiveTable{
         SESSION_LIST,

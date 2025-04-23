@@ -1,20 +1,14 @@
 # ninja log v6
-38	736	7670147722821755	build.ninja	ac1205a02406b4f0
-57	442	7670329553482955	ChatClient_autogen/timestamp	3c82ef8f8d300c8d
+38	736	7671217954292282	build.ninja	ac1205a02406b4f0
+52	217	7671215938224967	ChatClient_autogen/timestamp	3c82ef8f8d300c8d
 442	643	7669520773215688	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp	c66a9fb39b002e52
-57	442	7670329553482955	ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
-57	442	7670329553482955	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp	3c82ef8f8d300c8d
+52	217	7671215938224967	ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
+52	217	7671215938224967	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp	3c82ef8f8d300c8d
 444	3519	7670329554291738	CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj	517597c0c4a06230
-57	442	7670329553482955	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
+52	217	7671215938224967	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
 442	643	7669520773215688	ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp	c66a9fb39b002e52
 660	1470	7669520773524496	CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resource.cpp.obj	4973b12ceec7d1e8
-449	3536	7670329554343957	CMakeFiles/ChatClient.dir/widget.cpp.obj	99cc6cb46aee69c1
+219	2461	7671215939886538	CMakeFiles/ChatClient.dir/widget.cpp.obj	99cc6cb46aee69c1
 656	4885	7670082456438628	CMakeFiles/ChatClient.dir/main.cpp.obj	6cb0bd0dfcba1af3
-4120	4638	7670329591045418	ChatClient.exe	464f5e628da5b464
-455	4120	7670329554392852	CMakeFiles/ChatClient.dir/sessionfriendarea.cpp.obj	2ac9e75107554253
-54	225	7670330449199013	ChatClient_autogen/timestamp	3c82ef8f8d300c8d
-54	225	7670330449199013	ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
-54	225	7670330449199013	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/timestamp	3c82ef8f8d300c8d
-54	225	7670330449199013	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/mocs_compilation.cpp	3c82ef8f8d300c8d
+2462	2756	7671215962318400	ChatClient.exe	464f5e628da5b464
 227	2933	7670330450928634	CMakeFiles/ChatClient.dir/sessionfriendarea.cpp.obj	2ac9e75107554253
-2933	3221	7670330477990191	ChatClient.exe	464f5e628da5b464
