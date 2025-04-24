@@ -1,4 +1,13 @@
 D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/ChatClient_autogen/EWIEGA46WW/moc_widget.cpp: D:/code/chatsystem/ChatItem/ChatClient/widget.h \
+  D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h \
+  D:/code/chatsystem/ChatItem/ChatClient/messageshowarea.h \
+  D:/code/chatsystem/ChatItem/ChatClient/model/data.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QDateTime \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QDebug \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QFile \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QFileInfo \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QString \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/QUuid \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/q20functional.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/q20memory.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/q20type_traits.h \
@@ -17,6 +26,7 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qbytearrayalgorithms.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qbytearraylist.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qbytearrayview.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qcalendar.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qchar.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qcompare.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qcompare_impl.h \
@@ -30,9 +40,13 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qcontiguouscache.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qdarwinhelpers.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qdatastream.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qdatetime.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qdebug.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qendian.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qexceptionhandling.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qfile.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qfiledevice.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qfileinfo.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qflags.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qfloat16.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qforeach.h \
@@ -43,12 +57,14 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qglobalstatic.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qhash.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qhashfunctions.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qiodevice.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qiodevicebase.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qiterable.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qiterator.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qlatin1stringview.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qline.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qlist.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qlocale.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qlogging.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qmalloc.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qmap.h \
@@ -100,6 +116,7 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtdeprecationmarkers.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtenvironmentvariables.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtextstream.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtimezone.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtmetamacros.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtnoop.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtpreprocessorsupport.h \
@@ -112,11 +129,13 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qtypes.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qurl.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qutf8stringview.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtCore/quuid.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qvariant.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qvarlengtharray.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qversiontagging.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qxptype_traits.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtCore/qyieldcpu.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtGui/Qicon \
   E:/qt6/6.7.3/msvc2019_64/include/QtGui/qaction.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtGui/qbitmap.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtGui/qbrush.h \
@@ -149,11 +168,14 @@ D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Deb
   E:/qt6/6.7.3/msvc2019_64/include/QtGui/qwindowdefs_win.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/QLineEdit \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/QPushButton \
+  E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/QScrollArea \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/QWidget \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qabstractbutton.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qabstractscrollarea.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qframe.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qlineedit.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qpushbutton.h \
+  E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qscrollarea.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qtwidgets-config.h \
   E:/qt6/6.7.3/msvc2019_64/include/QtWidgets/qtwidgetsexports.h \
