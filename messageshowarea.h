@@ -59,6 +59,8 @@ class MessageContentLabel:public QWidget{
 public:
     MessageContentLabel(const QString& text,bool isLeft);
 
+    void paintEvent(QPaintEvent* event) override;
+
 private:
     QLabel* _label;
     bool _isLeft;
