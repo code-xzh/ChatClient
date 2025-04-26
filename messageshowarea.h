@@ -20,6 +20,13 @@ class MessageShowArea : public QScrollArea
 public:
     MessageShowArea();
 
+    //尾插
+    void addMessage(bool isleft,const Message& message);
+    //头插
+    void addFontMessage(bool isleft, const Message &message);
+    //清空
+    void clear();
+
 private:
     QWidget* _containter;
 };
@@ -43,10 +50,10 @@ public:
     static MessageItem* makeMessageItem(bool isLeft,const Message& mmesage);
 
     //添加工厂函数
-    static QWidget* makeTextMessageItem();
-    static QWidget* makeImageMessageItem();
-    static QWidget* makeFileMessageItem();
-    static QWidget* makeSpeechMessageItem();
+    static QWidget* makeTextMessageItem(bool isLeft,const QString text);
+    static QWidget* makeImageMessageItem(bool isLeft,const QString text);
+    static QWidget* makeFileMessageItem(bool isLeft,const QString text);
+    static QWidget* makeSpeechMessageItem(bool isLeft,const QString text);
 private:
     bool _isLeft;
 };

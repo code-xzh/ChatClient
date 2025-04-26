@@ -43,8 +43,8 @@ void Widget::InitMainWindow()
     _windowRight=new QWidget();
 
     _windowLeft->setFixedWidth(70);
-    _windowMid->setFixedWidth(310);
-    _windowRight->setMinimumWidth(500);
+    _windowMid->setFixedWidth(290);
+    _windowRight->setMinimumWidth(600);
 
     _windowLeft->setMinimumHeight(600);
 

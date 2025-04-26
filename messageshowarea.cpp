@@ -8,6 +8,8 @@
 #include <QPainter>
 #include <QPainterPath>
 
+#include "debug.h"
+
 using namespace model;
 
 //////////////////////////////////////////////
@@ -19,8 +21,8 @@ MessageShowArea::MessageShowArea() {
     this->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
     this->setWidgetResizable(true);
     //设置滚动条样式
-    this->verticalScrollBar()->setStyleSheet("qscrollBar:vertical{width:2px;background-color:rgb(240,240,240);}");
-    this->horizontalScrollBar()->setStyleSheet("qscrollBar:horizontal{height:0};");
+    this->verticalScrollBar()->setStyleSheet("QScrollBar:vertical{width:2px;background-color:rgb(240,240,240);}");
+    this->horizontalScrollBar()->setStyleSheet("QScrollBar:horizontal{height:0;}");
     this->setStyleSheet("QScorllArea{border:none;}");
 
     //2.创造container，作为包含内部元素的容器
@@ -29,9 +31,54 @@ MessageShowArea::MessageShowArea() {
 
     //3.给container添加布局管理器
     QVBoxLayout* layout=new QVBoxLayout();
-    layout->setSpacing(0);
+    layout->setSpacing(10);
     layout->setContentsMargins(0,0,0,0);
     _containter->setLayout(layout);
+
+    //4。构造测试数据
+#if TEST_UI
+    for(int i=0;i<30;++i)
+    {
+        UserInfo userInfo;
+        userInfo._nickname="程阳咏乐"+QString::number(i);
+        userInfo._avator=QIcon(":/resource/Image/lll.png");
+        Message message=Message::makeMessage(model::TEXT_TYPE,"",userInfo,(QString("我是猪")+QString::number(i)).toUtf8(),"");
+        this->addMessage(true,message);
+
+        UserInfo userInfo1;
+        userInfo1._nickname="席祖涵"+QString::number(i);
+        userInfo1._avator=QIcon(":/resource/Image/yyy.png");
+        Message message1=Message::makeMessage(model::TEXT_TYPE,"",userInfo1,(QString("是的，你是猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪")+QString::number(i)).toUtf8(),"");
+        this->addMessage(false,message1);
+    }
+#endif
+}
+
+void MessageShowArea::addMessage(bool isleft, const Message &message)
+{
+    //构造messageitem添加到布局管理器中
+    MessageItem* messageItem=MessageItem::makeMessageItem(isleft,message);
+    _containter->layout()->addWidget(messageItem);
+}
+
+void MessageShowArea::addFontMessage(bool isleft, const Message &message)
+{
+    MessageItem* messageItem=MessageItem::makeMessageItem(isleft,message);
+    QVBoxLayout* layout=dynamic_cast<QVBoxLayout*>(_containter->layout());
+    layout->insertWidget(0,messageItem);
+}
+
+void MessageShowArea::clear()
+{
+    //遍历删除
+    QLayout* layout=_containter->layout();
+    for(int i=layout->count()-1;i>=0;--i){
+        QLayoutItem* item=layout->takeAt(i);
+        if(item!=nullptr&&layout->widget()!=nullptr)
+        {
+            delete item->widget();
+        }
+    }
 }
 
 
@@ -47,8 +94,8 @@ MessageItem *MessageItem::makeMessageItem(bool isLeft, const Message &message)
     //1.创建对象和布局管理器
     MessageItem* messageItem =new MessageItem(isLeft);
     QGridLayout* layout=new QGridLayout();
-    layout->setSpacing(0);
-    layout->setContentsMargins(0,0,0,0);
+    layout->setSpacing(10);
+    layout->setContentsMargins(30,10,40,0);
     //这个messageitem最低不得低于100
     messageItem->setMinimumHeight(100);
     messageItem->setLayout(layout);
@@ -68,9 +115,9 @@ MessageItem *MessageItem::makeMessageItem(bool isLeft, const Message &message)
 
     //3.创建名字和时间
     QLabel* nameLabel=new QLabel();
-    nameLabel->setText(message._sender._nickname+"|"+message._time);
+    nameLabel->setText(message._sender._nickname+" | "+message._time);
     nameLabel->setAlignment(Qt::AlignBottom);
-    nameLabel->setStyleSheet("QLabel{fontsize:12px;color:rgb(178,178,187);}");
+    nameLabel->setStyleSheet("QLabel{font-size:12px;color:rgb(178,178,178);}");
     if(isLeft){
         layout->addWidget(nameLabel,0,1);
     }else{
@@ -81,16 +128,16 @@ MessageItem *MessageItem::makeMessageItem(bool isLeft, const Message &message)
     QWidget* contentWidget=nullptr;
     switch(message._messagetype){
     case TEXT_TYPE:
-        contentWidget=makeTextMessageItem();
+        contentWidget=makeTextMessageItem(isLeft,message._content);
         break;
     case IMAGE_TYPE:
-        contentWidget=makeImageMessageItem();
+        contentWidget=makeImageMessageItem(isLeft,message._content);
         break;
     case FILE_TYPE:
-        contentWidget=makeFileMessageItem();
+        contentWidget=makeFileMessageItem(isLeft,message._content);
         break;
     case SPEECH_TYPE:
-        contentWidget=makeSpeechMessageItem();
+        contentWidget=makeSpeechMessageItem(isLeft,message._content);
         break;
     default:
         LOG()<<"错误的消息类型！messageType"<<message._messagetype;
@@ -99,30 +146,31 @@ MessageItem *MessageItem::makeMessageItem(bool isLeft, const Message &message)
     if(isLeft){
         layout->addWidget(contentWidget,1,1);
     }else{
-        layout->addWidget(contentWidget,0,0);
+        layout->addWidget(contentWidget,1,0);
     }
 
     return messageItem;
 }
 
-QWidget *MessageItem::makeTextMessageItem()
+QWidget *MessageItem::makeTextMessageItem(bool isLeft,const QString text)
 {
-
+    MessageContentLabel* messageContentLabel=new MessageContentLabel(text,isLeft);
+    return messageContentLabel;
 }
 
-QWidget *MessageItem::makeImageMessageItem()
+QWidget *MessageItem::makeImageMessageItem(bool isLeft,const QString text)
 {
-
+    return nullptr;
 }
 
-QWidget *MessageItem::makeFileMessageItem()
+QWidget *MessageItem::makeFileMessageItem(bool isLeft,const QString text)
 {
-
+    return nullptr;
 }
 
-QWidget *MessageItem::makeSpeechMessageItem()
+QWidget *MessageItem::makeSpeechMessageItem(bool isLeft,const QString text)
 {
-
+    return nullptr;
 }
 
 
@@ -132,6 +180,8 @@ QWidget *MessageItem::makeSpeechMessageItem()
 
 MessageContentLabel::MessageContentLabel(const QString &text, bool isLeft):_isLeft(isLeft)
 {
+    //设置一下尺寸策略(sizePolicy)
+    this->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
     QFont font;
     font.setFamily("微软雅黑");
     font.setPixelSize(16);
@@ -140,7 +190,7 @@ MessageContentLabel::MessageContentLabel(const QString &text, bool isLeft):_isLe
     this->_label->setFont(font);
     this->_label->setAlignment(Qt::AlignVCenter|Qt::AlignLeft);
     this->_label->setWordWrap(true);//文本自动换行
-    this->_label->setStyleSheet("QLabel{padding:0 10px;line-height:1.2;}");
+    this->_label->setStyleSheet("QLabel{padding:0 10px;line-height:1.2;background-color:transparent;}");
 }
 
 //函数会在该控件被显示的时候被调用
@@ -189,15 +239,15 @@ void MessageContentLabel::paintEvent(QPaintEvent *event)
         path.closeSubpath();//绘制的线形成闭合的多边形，才能用brush填充颜色
         painter.drawPath(path);//绘制操作
 
-        this->_label->setGeometry(10,0,width,height);//label位置
+        this->_label->setGeometry(5,0,width,height);//label位置
     }else{
         painter.setPen(QPen(QColor(137,217,97)));
         painter.setBrush(QColor(137,217,97));
 
         //圆角矩形左侧边的横坐标位置
-        int leftPos=this->_label->width()-width-10;
+        int leftPos=this->width()-width-10;
         //圆角矩形右侧边的横坐标位置
-        int rightPos=this->_label->width()-10;
+        int rightPos=this->width()-10;
         //绘制圆角矩形
         painter.drawRoundedRect(leftPos,0,width,height,0,0);
         //绘制箭头
@@ -205,9 +255,9 @@ void MessageContentLabel::paintEvent(QPaintEvent *event)
         path.lineTo(rightPos+10,20);
         path.lineTo(rightPos,25);
         path.closeSubpath();//绘制的线形成闭合的多边形，才能用brush填充颜色
-        painter.drawPath(path);//绘制操作
+        painter.drawPath(path);//
 
-        this->_label->setGeometry(10,0,width,height);//label位置
+        this->_label->setGeometry(leftPos,0,width,height);//label位置
     }
 
     //6.重新设置父元素的高度，确保足够高，显示所有信息

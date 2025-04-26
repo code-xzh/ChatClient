@@ -18,5 +18,7 @@
         <file>resource/Image/submit.png</file>
         <file>resource/Image/unchecked.png</file>
         <file>resource/Image/logo.png</file>
+        <file>resource/Image/image.png</file>
+        <file>resource/Image/history.png</file>
     </qresource>
 </RCC>
