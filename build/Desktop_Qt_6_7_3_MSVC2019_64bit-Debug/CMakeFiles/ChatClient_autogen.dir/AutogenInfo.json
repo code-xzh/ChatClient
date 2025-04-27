@@ -345,6 +345,12 @@
 			null
 		],
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.h",
+			"MU",
+			"EWIEGA46WW/moc_selfinfowidget.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.h",
 			"MU",
 			"EWIEGA46WW/moc_sessionfriendarea.cpp",
@@ -420,6 +426,11 @@
 		],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageshowarea.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.cpp",
 			"MU",
 			null
 		],

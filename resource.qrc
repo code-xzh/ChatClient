@@ -20,5 +20,6 @@
         <file>resource/Image/logo.png</file>
         <file>resource/Image/image.png</file>
         <file>resource/Image/history.png</file>
+        <file>resource/Image/modify.png</file>
     </qresource>
 </RCC>

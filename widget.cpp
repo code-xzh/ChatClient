@@ -2,6 +2,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include "sessionfriendarea.h"
+#include "selfinfowidget.h"
 
 #include "debug.h"
 Widget* Widget::_instance=nullptr;
@@ -196,11 +197,18 @@ void Widget::initSignalSlot()
     //////////////////////////////////////////////
     /////连接信号槽，处理标签切换
     //////////////////////////////////////////////
-
     connect(_sessionTabBtm,&QPushButton::clicked,this,&Widget::switchTatoSession);
     connect(_friendTabBtm,&QPushButton::clicked,this,&Widget::switchTatoFriend);
     connect(_applyTabBtm,&QPushButton::clicked,this,&Widget::switchTatoApply);
 
+    //////////////////////////////////////////////
+    /////点击自己的头像，弹出对话框显示个人主页
+    //////////////////////////////////////////////
+    connect(_userAvator,&QPushButton::clicked,this,[=](){
+        SelfInfoWidget* selfInfoWidget=new SelfInfoWidget(this);
+        selfInfoWidget->exec();//弹出模态对话框
+        //selfInfoWidget->show();//弹出非模态对话框
+    });
 }
 
 void Widget::switchTatoSession()
