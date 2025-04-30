@@ -9,6 +9,8 @@
 #include <QPainterPath>
 
 #include "debug.h"
+#include "userinfowidget.h"
+#include "widget.h"
 
 using namespace model;
 
@@ -40,14 +42,20 @@ MessageShowArea::MessageShowArea() {
     for(int i=0;i<30;++i)
     {
         UserInfo userInfo;
+        userInfo._userId=QString::number(i);
         userInfo._nickname="程阳咏乐"+QString::number(i);
-        userInfo._avator=QIcon(":/resource/Image/lll.png");
+        userInfo._desciption="我是最亮的臭皮蛋";
+        userInfo._avator=QIcon(":/resource/Image/defaultAvatar.png");
+        userInfo._phone="41516123";
         Message message=Message::makeMessage(model::TEXT_TYPE,"",userInfo,(QString("我是猪")+QString::number(i)).toUtf8(),"");
         this->addMessage(true,message);
 
         UserInfo userInfo1;
+        userInfo1._userId=QString::number(i);
         userInfo1._nickname="席祖涵"+QString::number(i);
-        userInfo1._avator=QIcon(":/resource/Image/yyy.png");
+        userInfo1._desciption="我是最亮的仔";
+        userInfo1._avator=QIcon(":/resource/Image/defaultAvatar.png");
+        userInfo1._phone="6666666666";
         Message message1=Message::makeMessage(model::TEXT_TYPE,"",userInfo1,(QString("是的，你是猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪猪")+QString::number(i)).toUtf8(),"");
         this->addMessage(false,message1);
     }
@@ -148,6 +156,13 @@ MessageItem *MessageItem::makeMessageItem(bool isLeft, const Message &message)
     }else{
         layout->addWidget(contentWidget,1,0);
     }
+
+    //5.连接信号槽，处理用户点击头像
+    connect(avatarBtn,&QPushButton::clicked,messageItem,[=](){
+        Widget* widget=Widget::getInstance();
+        UserInfoWidget* userInfoWidget=new UserInfoWidget(message._sender,widget);
+        userInfoWidget->exec();
+    });
 
     return messageItem;
 }

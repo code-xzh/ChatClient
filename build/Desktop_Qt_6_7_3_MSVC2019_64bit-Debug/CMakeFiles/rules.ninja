@@ -30,7 +30,7 @@ rule CXX_COMPILER__ChatClient_unscanned_Debug
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__ChatClient_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && E:\qt6\Tools\CMake_64\bin\cmake.exe -E vs_link_exe --intdir=$OBJECT_DIR --rc="E:\Windows Kits\10\bin\10.0.22621.0\x64\rc.exe" --mt="E:\Windows Kits\10\bin\10.0.22621.0\x64\mt.exe" --manifests $MANIFESTS -- F:\VS2022\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && E:\Qt6\Tools\CMake_64\bin\cmake.exe -E vs_link_exe --intdir=$OBJECT_DIR --rc="E:\Windows Kits\10\bin\10.0.22621.0\x64\rc.exe" --mt="E:\Windows Kits\10\bin\10.0.22621.0\x64\mt.exe" --manifests $MANIFESTS -- F:\VS2022\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -47,7 +47,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = E:\qt6\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SD:\code\chatsystem\ChatItem\ChatClient -BD:\code\chatsystem\ChatItem\ChatClient\build\Desktop_Qt_6_7_3_MSVC2019_64bit-Debug
+  command = E:\Qt6\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SD:\code\chatsystem\ChatItem\ChatClient -BD:\code\chatsystem\ChatItem\ChatClient\build\Desktop_Qt_6_7_3_MSVC2019_64bit-Debug
   description = Re-running CMake...
   generator = 1
 
@@ -56,7 +56,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = E:\qt6\Tools\CMake_64\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
+  command = E:\Qt6\Tools\CMake_64\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
   description = Cleaning additional files...
 
 

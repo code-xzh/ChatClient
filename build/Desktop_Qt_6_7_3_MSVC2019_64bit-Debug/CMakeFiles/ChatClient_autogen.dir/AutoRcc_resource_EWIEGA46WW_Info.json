@@ -36,7 +36,7 @@
 	"OPTIONS" : [ "--no-zstd", "-name", "resource" ],
 	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
 	"OUTPUT_NAME" : "qrc_resource.cpp",
-	"RCC_EXECUTABLE" : "E:/qt6/6.7.3/msvc2019_64/bin/rcc.exe",
+	"RCC_EXECUTABLE" : "E:/Qt6/6.7.3/msvc2019_64/bin/rcc.exe",
 	"RCC_LIST_OPTIONS" : [ "--list" ],
 	"SETTINGS_FILE" : "D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/ChatClient_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt",
 	"SOURCE" : "D:/code/chatsystem/ChatItem/ChatClient/resource.qrc",
