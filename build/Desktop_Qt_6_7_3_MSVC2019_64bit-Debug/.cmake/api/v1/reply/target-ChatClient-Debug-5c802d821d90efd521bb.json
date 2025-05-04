@@ -27,21 +27,21 @@
 		],
 		"files" : 
 		[
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"E:/qt6/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
-			"E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake"
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 70,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 53,
+				"line" : 55,
 				"parent" : 0
 			},
 			{
@@ -331,27 +331,27 @@
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "E:/qt6/6.7.3/msvc2019_64/include/QtCore"
+					"path" : "E:/Qt6/6.7.3/msvc2019_64/include/QtCore"
 				},
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "E:/qt6/6.7.3/msvc2019_64/include"
+					"path" : "E:/Qt6/6.7.3/msvc2019_64/include"
 				},
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "E:/qt6/6.7.3/msvc2019_64/mkspecs/win32-msvc"
+					"path" : "E:/Qt6/6.7.3/msvc2019_64/mkspecs/win32-msvc"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "E:/qt6/6.7.3/msvc2019_64/include/QtWidgets"
+					"path" : "E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets"
 				},
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "E:/qt6/6.7.3/msvc2019_64/include/QtGui"
+					"path" : "E:/Qt6/6.7.3/msvc2019_64/include/QtGui"
 				}
 			],
 			"language" : "CXX",
@@ -373,7 +373,9 @@
 				10,
 				12,
 				14,
-				16
+				16,
+				18,
+				20
 			]
 		}
 	],
@@ -416,17 +418,17 @@
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "E:\\qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Widgetsd.lib",
+				"fragment" : "E:\\Qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Widgetsd.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "E:\\qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Guid.lib",
+				"fragment" : "E:\\Qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Guid.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 14,
-				"fragment" : "E:\\qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Cored.lib",
+				"fragment" : "E:\\Qt6\\6.7.3\\msvc2019_64\\lib\\Qt6Cored.lib",
 				"role" : "libraries"
 			},
 			{
@@ -441,7 +443,7 @@
 			},
 			{
 				"backtrace" : 32,
-				"fragment" : "E:\\qt6\\6.7.3\\msvc2019_64\\lib\\Qt6EntryPointd.lib",
+				"fragment" : "E:\\Qt6\\6.7.3\\msvc2019_64\\lib\\Qt6EntryPointd.lib",
 				"role" : "libraries"
 			},
 			{
@@ -496,7 +498,9 @@
 				10,
 				12,
 				14,
-				16
+				16,
+				18,
+				20
 			]
 		},
 		{
@@ -509,7 +513,9 @@
 				8,
 				9,
 				11,
-				13
+				13,
+				15,
+				17
 			]
 		},
 		{
@@ -523,15 +529,15 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				15
+				19
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				17,
-				18
+				21,
+				22
 			]
 		}
 	],
@@ -618,6 +624,28 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "selfinfowidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "userinfowidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "userinfowidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "sessiondatawidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "sessiondatawidget.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

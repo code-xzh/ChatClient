@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         messageeditarea.h messageeditarea.cpp
         selfinfowidget.h selfinfowidget.cpp
         userinfowidget.h userinfowidget.cpp
+        sessiondatawidget.h sessiondatawidget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ChatClient APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -14,6 +14,8 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/resource.qrc \
 	D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.h \
+	D:/code/chatsystem/ChatItem/ChatClient/sessiondatawidget.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/sessiondatawidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.h \
 	D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.cpp \

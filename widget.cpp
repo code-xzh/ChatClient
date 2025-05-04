@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include "sessionfriendarea.h"
 #include "selfinfowidget.h"
+#include "sessiondatawidget.h"
 
 #include "debug.h"
 Widget* Widget::_instance=nullptr;
@@ -28,7 +29,7 @@ Widget::Widget(QWidget *parent)
     //初始化右侧窗口样式布局
     InitRightWindow();
     //初始化信号槽
-    void initSignalSlot();
+    initSignalSlot();
 }
 
 //初始化主窗口样式布局
@@ -98,8 +99,6 @@ void Widget::InitLeftWindow()
     layout->addWidget(_applyTabBtm,1,Qt::AlignTop | Qt::AlignHCenter);
 
     layout->addStretch(20);//下边距
-
-    initSignalSlot();
 }
 
 void Widget::InitMidWindow()
@@ -175,12 +174,12 @@ void Widget::InitRightWindow()
 
     hlayout->addWidget(sessionTitleLabel);
 
-    QPushButton* extraBtn=new QPushButton();
-    extraBtn->setFixedSize(30,30);
-    extraBtn->setIconSize(QSize(30,30));
-    extraBtn->setIcon(QIcon(":/resource/Image/more.png"));
-    extraBtn->setStyleSheet("QPushButton{border:none;background-color:rgb(245,245,245);}QPushButton:pressed{background-color:rgb(220,220,220);}");
-    hlayout->addWidget(extraBtn);
+    _extraBtn=new QPushButton();
+    _extraBtn->setFixedSize(30,30);
+    _extraBtn->setIconSize(QSize(30,30));
+    _extraBtn->setIcon(QIcon(":/resource/Image/more.png"));
+    _extraBtn->setStyleSheet("QPushButton{border:none;background-color:rgb(245,245,245);}QPushButton:pressed{background-color:rgb(220,220,220);}");
+    hlayout->addWidget(_extraBtn);
 
     //4.添加消息展示区
     messageShowArea=new MessageShowArea();
@@ -208,6 +207,14 @@ void Widget::initSignalSlot()
         SelfInfoWidget* selfInfoWidget=new SelfInfoWidget(this);
         selfInfoWidget->exec();//弹出模态对话框
         //selfInfoWidget->show();//弹出非模态对话框
+    });
+
+    //////////////////////////////////////////////
+    /////点击会话详情按钮，弹出对话框显示个人主页
+    //////////////////////////////////////////////
+    connect(_extraBtn,&QPushButton::clicked,this,[=](){
+        SessionDataWidget* sessionDataWidget= new SessionDataWidget(this);
+        sessionDataWidget->exec();
     });
 }
 

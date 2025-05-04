@@ -31,6 +31,8 @@ private:
     QLineEdit* _searchEdit;//用户搜索框
     QPushButton* _addFriendBtn;//加好友按钮
 
+    QPushButton* _extraBtn;//显示会话详情按钮
+
     MessageShowArea* messageShowArea;//消息展示区
     MessageEditArea* messageEditArea;//消息编辑区
 
