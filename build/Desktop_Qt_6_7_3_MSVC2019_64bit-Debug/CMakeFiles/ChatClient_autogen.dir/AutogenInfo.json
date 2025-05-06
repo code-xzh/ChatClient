@@ -321,6 +321,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.h",
+			"MU",
+			"EWIEGA46WW/moc_choosefrienddialog.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/debug.h",
 			"MU",
 			"EWIEGA46WW/moc_debug.cpp",
@@ -430,6 +436,11 @@
 	"SETTINGS_FILE" : "D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/ChatClient_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.cpp",
+			"MU",
+			null
+		],
 		[ "D:/code/chatsystem/ChatItem/ChatClient/main.cpp", "MU", null ],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.cpp",

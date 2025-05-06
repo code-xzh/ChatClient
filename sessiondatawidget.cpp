@@ -2,6 +2,7 @@
 #include <QVBoxLayout>
 #include <QFontMetrics>
 
+#include "choosefrienddialog.h"
 #include "debug.h"
 
 //////////////////////////////////////////////////
@@ -91,5 +92,11 @@ SessionDataWidget::SessionDataWidget(QWidget* parent):QDialog(parent)
     style+="QPushButton:pressed{background-color:rgb(235,235,235);}";
     _deleteFriendBtn->setStyleSheet(style);
     layout->addWidget(_deleteFriendBtn,1,0,1,3);
+
+    //6.添加信号槽，处理点击“创建群聊”按钮
+    connect(createGroupBtn->getAvatar(),&QPushButton::clicked,this,[=](){
+        ChooseFriendDialog* chooseFriendDialog=new ChooseFriendDialog(this);
+        chooseFriendDialog->exec();
+    });
 }
 

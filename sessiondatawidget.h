@@ -17,6 +17,11 @@ class AvatarItem:public QWidget
 public:
     AvatarItem(const QIcon& avatar,const QString& name);
 
+    QPushButton* getAvatar()
+    {
+        return _avatarBtn;
+    }
+
 private:
     QPushButton* _avatarBtn;
     QLabel* _nameLabel;
