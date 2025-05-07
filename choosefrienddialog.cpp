@@ -1,4 +1,4 @@
-#include "choosefrienddialog.h"
+ #include "choosefrienddialog.h"
 #include <QScrollArea>
 #include <QScrollBar>
 #include <qpushbutton>
@@ -9,7 +9,8 @@
 //////////////////////////////////////////
 /// 选择好友窗口的好友项
 //////////////////////////////////////////
-ChooseFriendItem::ChooseFriendItem(const QIcon &avatar, const QString &name, bool checked)
+ChooseFriendItem::ChooseFriendItem(ChooseFriendDialog* onwer,const QString& userId,const QIcon &avatar, const QString &name, bool checked)
+    :_userId(userId)
 {
     //1.设置空间的基本属性
     this->setFixedHeight(50);
@@ -44,6 +45,17 @@ ChooseFriendItem::ChooseFriendItem(const QIcon &avatar, const QString &name, boo
     layout->addWidget(_checkBox);
     layout->addWidget(_avatarBtn);
     layout->addWidget(_nameLabel);
+
+    //7.连接信号槽
+    connect(_checkBox,&QCheckBox::toggled,this,[=](bool checked){
+        if(checked){
+            //勾选了复选框
+            onwer->addSelectedFriend(userId,avatar,name);
+        }else{
+            //取消勾选
+            onwer->deleteSelectedFriend(userId);
+        }
+    });
 }
 
 void ChooseFriendItem::paintEvent(QPaintEvent *event)
@@ -135,7 +147,7 @@ void ChooseFriendDialog::initLeft(QHBoxLayout *layout)
     QIcon defaultAvatar(":/resource/Image/defaultAvatar.png");
     for(int i=0;i<30;++i)
     {
-        this->addFriend(defaultAvatar,"张三"+QString::number(i),false);
+        this->addFriend(QString::number(1000+i),defaultAvatar,"张三"+QString::number(i),false);
     }
 #endif
 }
@@ -199,7 +211,7 @@ void ChooseFriendDialog::initRight(QHBoxLayout *layout)
     gridlayout->addWidget(cancelBtn,2,5,1,3);
 
     //8.构造测试数据
-#if TEST_UI
+#if 0
     QIcon defaultAvatar(":/resource/Image/defaultAvatar.png");
     for(int i=0;i<30;++i)
     {
@@ -208,15 +220,52 @@ void ChooseFriendDialog::initRight(QHBoxLayout *layout)
 #endif
 }
 
-void ChooseFriendDialog::addFriend(const QIcon &avatar, const QString &name, bool checked)
+void ChooseFriendDialog::addFriend(const QString& userId,const QIcon &avatar, const QString &name, bool checked)
 {
-    ChooseFriendItem* item=new ChooseFriendItem(avatar,name,checked);
+    ChooseFriendItem* item=new ChooseFriendItem(this,userId,avatar,name,checked);
     _totalContainer->layout()->addWidget(item);
 }
 
-void ChooseFriendDialog::addSelectedFriend(const QIcon &avatar, const QString &name)
+void ChooseFriendDialog::addSelectedFriend(const QString& userId,const QIcon &avatar, const QString &name)
 {
-    ChooseFriendItem* item=new ChooseFriendItem(avatar,name,true);
+    ChooseFriendItem* item=new ChooseFriendItem(this,userId,avatar,name,true);
     _selectContainer->layout()->addWidget(item);
 }
+
+void ChooseFriendDialog::deleteSelectedFriend(const QString &userId)
+{
+    //遍历selectedContainer的每个item
+    QVBoxLayout* vlayout = dynamic_cast<QVBoxLayout*>(_selectContainer->layout());
+    //由于遍历+删除，需要从后往前遍历
+    for(int i=vlayout->count();i>=0;--i){
+        auto* item=vlayout->itemAt(i);
+        if(item==nullptr||item->widget()==nullptr)
+            continue;
+        ChooseFriendItem* chooseFriendItem=dynamic_cast<ChooseFriendItem*>(item->widget());
+        //判断当前item的userid是否为要删除的
+        if(chooseFriendItem->getUserId()!=userId)
+            continue;
+
+        vlayout->removeWidget(chooseFriendItem);
+        //内部成员作为信号槽的参数，过早释放会导致程序崩溃，因此用deletelater，目的是为了让qt自身判断释放的时机
+        //delete chooseFriendItem;
+        chooseFriendItem->deleteLater();
+    }
+
+    //左侧也要遍历，取消勾选状态
+    QVBoxLayout* vlayoutLeft=dynamic_cast<QVBoxLayout*>(_totalContainer->layout());
+    for(int i=0;i<vlayoutLeft->count();++i){
+        auto* item=vlayoutLeft->itemAt(i);
+        if(item==nullptr||item->widget()==nullptr)
+            continue;
+        ChooseFriendItem* chooseFriendItem=dynamic_cast<ChooseFriendItem*>(item->widget());
+
+        if(chooseFriendItem->getUserId()!=userId)
+            continue;
+
+        //取消选中状态
+        chooseFriendItem->getcheckBox()->setChecked(false);
+    }
+};
+
 

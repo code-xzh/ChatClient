@@ -12,21 +12,36 @@
 /// 选择好友窗口的好友项
 //////////////////////////////////////////
 
+class ChooseFriendDialog;
+
 class ChooseFriendItem:public QWidget
 {
     Q_OBJECT
 public:
-    ChooseFriendItem(const QIcon& avatar,const QString& name,bool checked);
+    ChooseFriendItem(ChooseFriendDialog* onwer,const QString& userId,const QIcon& avatar,const QString& name,bool checked);
 
     void paintEvent(QPaintEvent* event) override;
     void enterEvent(QEnterEvent* event) override;
     void leaveEvent(QEvent* event) override;
+
+    const QString& getUserId() const
+    {
+        return _userId;
+    }
+
+    QCheckBox* getcheckBox()
+    {
+        return _checkBox;
+    }
 private:
     bool _isHover=false;
 
     QCheckBox* _checkBox;
     QPushButton* _avatarBtn;
     QLabel* _nameLabel;
+    ChooseFriendDialog* _onwer; //哪个窗口持有
+
+    QString _userId;//记录用户的userId
 };
 
 
@@ -43,8 +58,9 @@ public:
     void initLeft(QHBoxLayout* layout);
     void initRight(QHBoxLayout* layout);
 
-    void addFriend(const QIcon& avatar,const QString& name,bool checked);
-    void addSelectedFriend(const QIcon& avatar,const QString& name);
+    void addFriend(const QString& userId,const QIcon& avatar,const QString& name,bool checked);
+    void addSelectedFriend(const QString& userId,const QIcon& avatar,const QString& name);
+    void deleteSelectedFriend(const QString& userId);
 
 private:
     //保存左侧全部好友列表的QWidget
