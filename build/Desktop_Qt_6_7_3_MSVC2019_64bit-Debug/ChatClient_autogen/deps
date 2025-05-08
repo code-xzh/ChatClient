@@ -7,6 +7,8 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.h \
 	D:/code/chatsystem/ChatItem/ChatClient/debug.h \
+	D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/main.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h \
@@ -220,6 +222,7 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtGui/qwindowdefs_win.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QCheckBox \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QDialog \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QGridLayout \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QHBoxLayout \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QLabel \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QLineEdit \

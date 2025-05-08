@@ -333,6 +333,12 @@
 			null
 		],
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.h",
+			"MU",
+			"EWIEGA46WW/moc_groupsessiondatawidget.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h",
 			"MU",
 			"EWIEGA46WW/moc_messageeditarea.cpp",
@@ -438,6 +444,11 @@
 	[
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.cpp",
 			"MU",
 			null
 		],

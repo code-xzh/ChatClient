@@ -4,6 +4,8 @@
 #include "sessionfriendarea.h"
 #include "selfinfowidget.h"
 #include "sessiondatawidget.h"
+#include "groupsessiondatawidget.h"
+#include "debug.h"
 
 #include "debug.h"
 Widget* Widget::_instance=nullptr;
@@ -213,8 +215,21 @@ void Widget::initSignalSlot()
     /////点击会话详情按钮，弹出对话框显示个人主页
     //////////////////////////////////////////////
     connect(_extraBtn,&QPushButton::clicked,this,[=](){
-        SessionDataWidget* sessionDataWidget= new SessionDataWidget(this);
-        sessionDataWidget->exec();
+#if TEST_GROUP_SESSION_DATA
+        bool isSingleChat=false;
+#else
+        bool isSingleChat=false;
+#endif
+        //判定是单聊还是群聊
+        if(isSingleChat){
+            //单聊弹出的窗口
+            SessionDataWidget* sessionDataWidget= new SessionDataWidget(this);
+            sessionDataWidget->exec();
+        }else{
+            //群聊弹出的窗口
+            GroupSessionDataWidget* groupSessionDataWidget=new GroupSessionDataWidget(this);
+            groupSessionDataWidget->exec();
+        }
     });
 }
 
