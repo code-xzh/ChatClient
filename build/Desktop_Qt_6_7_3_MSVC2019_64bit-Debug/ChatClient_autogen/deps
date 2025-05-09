@@ -1,5 +1,7 @@
 ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/CMakeLists.txt \
+	D:/code/chatsystem/ChatItem/ChatClient/addfrienddialog.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/addfrienddialog.h \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \

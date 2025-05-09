@@ -5,6 +5,7 @@
 #include "selfinfowidget.h"
 #include "sessiondatawidget.h"
 #include "groupsessiondatawidget.h"
+#include "addfrienddialog.h"
 #include "debug.h"
 
 #include "debug.h"
@@ -231,6 +232,16 @@ void Widget::initSignalSlot()
             groupSessionDataWidget->exec();
         }
     });
+
+    //////////////////////////////////////////////
+    /////点击添加好友按钮，弹出添加好友窗口
+    //////////////////////////////////////////////
+    connect(_addFriendBtn,&QPushButton::clicked,this,[=](){
+        AddFriendDialog* addFriendDialog=new AddFriendDialog(this);
+        addFriendDialog->exec();//弹出模态对话框
+        //selfInfoWidget->show();//弹出非模态对话框
+    });
+
 }
 
 void Widget::switchTatoSession()
