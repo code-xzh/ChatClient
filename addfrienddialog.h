@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QWidget>
 #include <QGridLayout>
+#include <QLineEdit>
 
 #include "model/data.h"
 
@@ -36,8 +37,17 @@ public:
     //初始化结果显示区
     void initResultArea();
 
+    //往窗口新增一个好友搜索
+    void addResult(const UserInfo& userInfo);
+
+    void clear();
+
+    void setSearchKey(const QString& searchKey);
+
 private:
     QGridLayout* layout;
+    QWidget* resultContainer;
+    QLineEdit* searchEdit;
 };
 
 

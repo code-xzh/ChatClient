@@ -4,6 +4,8 @@
 #include <QHBoxLayout>
 #include <QScrollBar>
 
+#include "historymessagewidget.h"
+
 MessageEditArea::MessageEditArea(QWidget *parent)
     : QWidget{parent}
 {
@@ -75,4 +77,10 @@ MessageEditArea::MessageEditArea(QWidget *parent)
     style+="QPushButton:pressed{background-color:rgb(190,190,190);}";
     _sendTextBtn->setStyleSheet(style);
     vlayout->addWidget(_sendTextBtn,0,Qt::AlignRight | Qt::AlignVCenter);
+
+    //7.关联信号槽
+    connect(_getHistoryBtn,&QPushButton::clicked,this,[=](){
+        HistoryMessageWidget* historyMessageWidget=new HistoryMessageWidget(this);
+        historyMessageWidget->exec();
+    });
 };

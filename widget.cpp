@@ -242,6 +242,20 @@ void Widget::initSignalSlot()
         //selfInfoWidget->show();//弹出非模态对话框
     });
 
+    //////////////////////////////////////////////
+    /////修改对话框内容，弹出添加好友窗口
+    //////////////////////////////////////////////
+    connect(_searchEdit,&QLineEdit::textEdited,this,[=](){
+        //取出内容，设置到新弹框的输入框
+        const QString& searchKey=_searchEdit->text();
+        AddFriendDialog* addFriendDialog=new AddFriendDialog(this);
+        addFriendDialog->setSearchKey(searchKey);
+        //清空主窗口的文本内容
+        _searchEdit->setText("");
+        addFriendDialog->exec();//弹出模态对话框
+        //selfInfoWidget->show();//弹出非模态对话框
+    });
+
 }
 
 void Widget::switchTatoSession()

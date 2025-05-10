@@ -2,6 +2,7 @@
 #include "EWIEGA46WW/moc_addfrienddialog.cpp"
 #include "EWIEGA46WW/moc_choosefrienddialog.cpp"
 #include "EWIEGA46WW/moc_groupsessiondatawidget.cpp"
+#include "EWIEGA46WW/moc_historymessagewidget.cpp"
 #include "EWIEGA46WW/moc_messageeditarea.cpp"
 #include "EWIEGA46WW/moc_messageshowarea.cpp"
 #include "EWIEGA46WW/moc_selfinfowidget.cpp"

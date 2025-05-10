@@ -31,7 +31,7 @@ GroupSessionDataWidget::GroupSessionDataWidget(QWidget *parent):QDialog(parent)
     QScrollArea* scrollArea = new QScrollArea();
     scrollArea->setWidgetResizable(true);
     scrollArea->verticalScrollBar()->setStyleSheet("QScrollBar:vertical{width:2px;background-color:rgb(255,255,255);}");
-    scrollArea->horizontalScrollBar()->setStyleSheet("QScrollBar:horizontal{height:o;}");
+    scrollArea->horizontalScrollBar()->setStyleSheet("QScrollBar:horizontal{height:0;}");
     scrollArea->setFixedSize(310,350);
     scrollArea->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     scrollArea->setStyleSheet("QWidget{background-color:transparent;border:none;}");
@@ -89,7 +89,7 @@ GroupSessionDataWidget::GroupSessionDataWidget(QWidget *parent):QDialog(parent)
 
     //7.退出群聊按钮
     QPushButton* exitGroupBtn=new QPushButton();
-    exitGroupBtn->setText("推出群聊");
+    exitGroupBtn->setText("退出群聊");
     exitGroupBtn->setFixedSize(310,50);
     exitGroupBtn->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Fixed);
     QString btnStyle="QPushButton{border:1px solid rgb(90,90,90);border-radius:5px;background-color:transparent}";

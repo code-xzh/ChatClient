@@ -345,6 +345,12 @@
 			null
 		],
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.h",
+			"MU",
+			"EWIEGA46WW/moc_historymessagewidget.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h",
 			"MU",
 			"EWIEGA46WW/moc_messageeditarea.cpp",
@@ -460,6 +466,11 @@
 		],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.cpp",
 			"MU",
 			null
 		],

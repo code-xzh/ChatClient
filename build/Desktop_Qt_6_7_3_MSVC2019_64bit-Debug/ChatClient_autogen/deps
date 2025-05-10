@@ -11,6 +11,8 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/debug.h \
 	D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.h \
+	D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/main.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h \
