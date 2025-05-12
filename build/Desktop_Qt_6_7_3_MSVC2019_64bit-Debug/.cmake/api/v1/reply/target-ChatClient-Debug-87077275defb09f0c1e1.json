@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 76,
+				"line" : 78,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 59,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
@@ -379,7 +379,9 @@
 				22,
 				24,
 				26,
-				28
+				28,
+				30,
+				32
 			]
 		}
 	],
@@ -508,7 +510,9 @@
 				22,
 				24,
 				26,
-				28
+				28,
+				30,
+				32
 			]
 		},
 		{
@@ -527,7 +531,9 @@
 				19,
 				21,
 				23,
-				25
+				25,
+				27,
+				29
 			]
 		},
 		{
@@ -541,15 +547,15 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				27
+				31
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				29,
-				30
+				33,
+				34
 			]
 		}
 	],
@@ -702,6 +708,28 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "historymessagewidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "loginwidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "loginwidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "phoneloginwidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "phoneloginwidget.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

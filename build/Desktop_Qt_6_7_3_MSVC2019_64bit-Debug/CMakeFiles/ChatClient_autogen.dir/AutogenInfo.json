@@ -351,6 +351,12 @@
 			null
 		],
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/loginwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_loginwidget.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h",
 			"MU",
 			"EWIEGA46WW/moc_messageeditarea.cpp",
@@ -366,6 +372,12 @@
 			"D:/code/chatsystem/ChatItem/ChatClient/model/data.h",
 			"MU",
 			"NLOY5YBGEN/moc_data.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/phoneloginwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_phoneloginwidget.cpp",
 			null
 		],
 		[
@@ -474,6 +486,7 @@
 			"MU",
 			null
 		],
+		[ "D:/code/chatsystem/ChatItem/ChatClient/loginwidget.cpp", "MU", null ],
 		[ "D:/code/chatsystem/ChatItem/ChatClient/main.cpp", "MU", null ],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.cpp",
@@ -482,6 +495,11 @@
 		],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/messageshowarea.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/phoneloginwidget.cpp",
 			"MU",
 			null
 		],

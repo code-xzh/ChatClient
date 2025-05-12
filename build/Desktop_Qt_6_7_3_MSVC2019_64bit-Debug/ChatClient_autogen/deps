@@ -13,12 +13,16 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/groupsessiondatawidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/historymessagewidget.h \
+	D:/code/chatsystem/ChatItem/ChatClient/loginwidget.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/loginwidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/main.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageeditarea.h \
 	D:/code/chatsystem/ChatItem/ChatClient/messageshowarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/messageshowarea.h \
 	D:/code/chatsystem/ChatItem/ChatClient/model/data.h \
+	D:/code/chatsystem/ChatItem/ChatClient/phoneloginwidget.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/phoneloginwidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/resource.qrc \
 	D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/selfinfowidget.h \
