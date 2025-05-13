@@ -6,6 +6,7 @@
 #include <QPushButton>
 
 #include "phoneloginwidget.h"
+#include "toast.h"
 
 LoginWidget::LoginWidget(QWidget *parent)
     : QWidget{parent}
@@ -120,5 +121,9 @@ LoginWidget::LoginWidget(QWidget *parent)
 
         //关闭当前窗口
         this->close();
+    });
+
+    connect(submitBtn,&QPushButton::clicked,this,[=](){
+        Toast::showMessage("测试Toast窗口");
     });
 }

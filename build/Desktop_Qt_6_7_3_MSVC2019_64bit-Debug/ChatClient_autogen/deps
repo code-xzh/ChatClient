@@ -30,6 +30,8 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/sessiondatawidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/sessionfriendarea.h \
+	D:/code/chatsystem/ChatItem/ChatClient/toast.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/toast.h \
 	D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/widget.cpp \

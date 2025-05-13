@@ -399,6 +399,12 @@
 			null
 		],
 		[
+			"D:/code/chatsystem/ChatItem/ChatClient/toast.h",
+			"MU",
+			"EWIEGA46WW/moc_toast.cpp",
+			null
+		],
+		[
 			"D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.h",
 			"MU",
 			"EWIEGA46WW/moc_userinfowidget.cpp",
@@ -518,6 +524,7 @@
 			"MU",
 			null
 		],
+		[ "D:/code/chatsystem/ChatItem/ChatClient/toast.cpp", "MU", null ],
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.cpp",
 			"MU",
