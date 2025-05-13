@@ -268,6 +268,36 @@ ChatClient_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 ChatClient_SOURCE_DIR:STATIC=D:/code/chatsystem/ChatItem/ChatClient
 
+//The directory containing a CMake configuration file for Protobuf.
+Protobuf_DIR:PATH=Protobuf_DIR-NOTFOUND
+
+//Path to a file.
+Protobuf_INCLUDE_DIR:PATH=Protobuf_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+Protobuf_LIBRARY_DEBUG:FILEPATH=C:/Program Files/MySQL/MySQL Server 8.0/bin/libprotobuf.lib
+
+//Path to a library.
+Protobuf_LIBRARY_RELEASE:FILEPATH=C:/Program Files/MySQL/MySQL Server 8.0/bin/libprotobuf.lib
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=C:/Program Files/MySQL/MySQL Server 8.0/bin/libprotobuf-lite.lib
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=C:/Program Files/MySQL/MySQL Server 8.0/bin/libprotobuf-lite.lib
+
+//The Google Protocol Buffers Compiler
+Protobuf_PROTOC_EXECUTABLE:FILEPATH=D:/EMS_Work/protobuf-3.19.0/bin/protoc.exe
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=Protobuf_PROTOC_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=Protobuf_PROTOC_LIBRARY_RELEASE-NOTFOUND
+
+//Path to a file.
+Protobuf_SRC_ROOT_FOLDER:PATH=Protobuf_SRC_ROOT_FOLDER-NOTFOUND
+
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
@@ -302,6 +332,12 @@ Qt6GuiTools_DIR:PATH=E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6GuiTools
 //The directory containing a CMake configuration file for Qt6Gui.
 Qt6Gui_DIR:PATH=E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Gui
 
+//The directory containing a CMake configuration file for Qt6ProtobufTools.
+Qt6ProtobufTools_DIR:PATH=E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools
+
+//The directory containing a CMake configuration file for Qt6Protobuf.
+Qt6Protobuf_DIR:PATH=E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf
+
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=E:/qt6/6.7.3/msvc2019_64/lib/cmake/Qt6WidgetsTools
 
@@ -328,6 +364,9 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=E:/qt6/6.7.3/msvc2019_64/bin/windeployqt.exe
+
+//Path to a program.
+__WrapProtoc_protoc_imported_location:FILEPATH=D:/EMS_Work/protobuf-3.19.0/bin/protoc.exe
 
 
 ########################
@@ -496,6 +535,22 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
+//ADVANCED property for variable: Protobuf_INCLUDE_DIR
+Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
+Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
+Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
+Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
+Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
+Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
+Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
+Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Qt feature: abstractbutton (from target Qt6::Widgets)
 QT_FEATURE_abstractbutton:INTERNAL=ON
 //Qt feature: abstractslider (from target Qt6::Widgets)
@@ -944,6 +999,12 @@ QT_FEATURE_processenvironment:INTERNAL=ON
 QT_FEATURE_progressbar:INTERNAL=ON
 //Qt feature: progressdialog (from target Qt6::Widgets)
 QT_FEATURE_progressdialog:INTERNAL=ON
+//Qt feature: protobuf_qtcoretypes (from target Qt6::Protobuf)
+QT_FEATURE_protobuf_qtcoretypes:INTERNAL=ON
+//Qt feature: protobuf_qtguitypes (from target Qt6::Protobuf)
+QT_FEATURE_protobuf_qtguitypes:INTERNAL=ON
+//Qt feature: protobuf_wellknowntypes (from target Qt6::Protobuf)
+QT_FEATURE_protobuf_wellknowntypes:INTERNAL=ON
 //Qt feature: proxymodel (from target Qt6::Core)
 QT_FEATURE_proxymodel:INTERNAL=ON
 //Qt feature: pushbutton (from target Qt6::Widgets)
@@ -952,6 +1013,8 @@ QT_FEATURE_pushbutton:INTERNAL=ON
 QT_FEATURE_qqnx_imf:INTERNAL=OFF
 //Qt feature: qqnx_pps (from target Qt6::Core)
 QT_FEATURE_qqnx_pps:INTERNAL=OFF
+//Qt feature: qtprotobufgen (from target Qt6::Protobuf)
+QT_FEATURE_qtprotobufgen:INTERNAL=ON
 //Qt feature: radiobutton (from target Qt6::Widgets)
 QT_FEATURE_radiobutton:INTERNAL=ON
 //Qt feature: raster_64bit (from target Qt6::Gui)
@@ -1236,4 +1299,5 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/ChatClient
+__qt_protobuf_macros_module_base_dir:INTERNAL=E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools
 

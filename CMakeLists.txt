@@ -9,8 +9,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+file(GLOB PB_FILES "./proto/*.proto")
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Protobuf)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -41,6 +43,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         phoneloginwidget.h phoneloginwidget.cpp
         toast.h toast.cpp
     )
+
+  qt_add_protobuf(ChatClient PROTO_FILES ${PB_FILES})
+
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ChatClient APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

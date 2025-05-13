@@ -311,6 +311,55 @@
 		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake",
 		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfigVersion.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfigVersionImpl.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfig.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufDependencies.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfigVersion.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfigVersionImpl.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfig.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsDependencies.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/FindWrapProtoc.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-config-version.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-options.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslConfigVersion.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets-debug.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets-release.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-config.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-debug.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-release.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-debug.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-release.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-generate.cmake",
+		"D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-module.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
+		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets-debug.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets-relwithdebinfo.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsAdditionalTargetInfo.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsVersionlessTargets.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsMacros.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets-debug.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets-relwithdebinfo.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufAdditionalTargetInfo.cmake",
+		"E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufVersionlessTargets.cmake",
 		"E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
 		"D:/code/chatsystem/ChatItem/ChatClient/resource.qrc"
 	],
@@ -324,6 +373,60 @@
 			"D:/code/chatsystem/ChatItem/ChatClient/addfrienddialog.h",
 			"MU",
 			"EWIEGA46WW/moc_addfrienddialog.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_base.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_file.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_friend.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_gateway.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_message_storage.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_message_transmit.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_notify.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_speech_recognition.qpb.cpp",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user.qpb.h",
+			"MU",
+			"RXDYMAKMZK/moc_user.qpb.cpp",
 			null
 		],
 		[
@@ -424,6 +527,7 @@
 	[
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
+		"QT_PROTOBUF_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -441,9 +545,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug",
 		"E:/Qt6/6.7.3/msvc2019_64/include/QtCore",
 		"E:/Qt6/6.7.3/msvc2019_64/include",
 		"E:/Qt6/6.7.3/msvc2019_64/mkspecs/win32-msvc",
+		"E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf",
 		"E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets",
 		"E:/Qt6/6.7.3/msvc2019_64/include/QtGui"
 	],
@@ -461,7 +567,18 @@
 	"MOC_PREDEFS_CMD" : [],
 	"MOC_PREDEFS_FILE" : "",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user_protobuftyperegistrations.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
 	"PARSE_CACHE_FILE" : "D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/ChatClient_autogen.dir/ParseCache.txt",
@@ -474,6 +591,51 @@
 	[
 		[
 			"D:/code/chatsystem/ChatItem/ChatClient/addfrienddialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user.qpb.cpp",
 			"MU",
 			null
 		],
@@ -534,7 +696,18 @@
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition_protobuftyperegistrations.cpp",
+		"D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user_protobuftyperegistrations.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : false,
 	"VERBOSITY" : 0

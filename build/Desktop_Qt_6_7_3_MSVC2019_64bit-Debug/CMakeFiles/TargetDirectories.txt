@@ -1,4 +1,5 @@
 D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/ChatClient.dir
+D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/ChatClient_qtprotobufgen_deps_0.dir
 D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
 D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
 D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir

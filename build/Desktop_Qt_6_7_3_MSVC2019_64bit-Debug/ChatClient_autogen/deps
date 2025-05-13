@@ -6,6 +6,24 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/base.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/file.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/friend.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/gateway.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_storage.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/message_transmit.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/notify.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/speech_recognition.qpb.h \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user.qpb.cpp \
+	D:/code/chatsystem/ChatItem/ChatClient/build/Desktop_Qt_6_7_3_MSVC2019_64bit-Debug/user.qpb.h \
 	D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/choosefrienddialog.h \
 	D:/code/chatsystem/ChatItem/ChatClient/debug.h \
@@ -36,6 +54,23 @@ ChatClient_autogen/timestamp: \
 	D:/code/chatsystem/ChatItem/ChatClient/userinfowidget.h \
 	D:/code/chatsystem/ChatItem/ChatClient/widget.cpp \
 	D:/code/chatsystem/ChatItem/ChatClient/widget.h \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslConfig.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslConfigVersion.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets-debug.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets-release.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/absl/abslTargets.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-config-version.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-generate.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-module.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-options.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-debug.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-release.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-config.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-debug.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets-release.cmake \
+	D:/code/chatsystem/env/vcpkg/installed/x64-windows/share/utf8_range/utf8_range-targets.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/QDateTime \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/QDebug \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/QFile \
@@ -116,6 +151,7 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qmargins.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qmath.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qmetacontainer.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qmetaobject.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qmetatype.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qminmax.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtCore/qnamespace.h \
@@ -230,6 +266,14 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtGui/qvectornd.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtGui/qwindowdefs.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtGui/qwindowdefs_win.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qabstractprotobufserializer.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qprotobuflazymessagepointer.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qprotobufmessage.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qprotobufobject.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qprotobufoneof.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qtprotobufexports.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qtprotobufglobal.h \
+	E:/Qt6/6.7.3/msvc2019_64/include/QtProtobuf/qtprotobuftypes.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QCheckBox \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QDialog \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/QGridLayout \
@@ -261,6 +305,7 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h \
 	E:/Qt6/6.7.3/msvc2019_64/include/QtWidgets/qwidget.h \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/FindWrapProtoc.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake \
@@ -421,6 +466,25 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufAdditionalTargetInfo.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfig.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfigVersion.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufConfigVersionImpl.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufDependencies.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets-debug.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets-relwithdebinfo.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufTargets.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Protobuf/Qt6ProtobufVersionlessTargets.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsAdditionalTargetInfo.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfig.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfigVersion.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfigVersionImpl.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsDependencies.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsMacros.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets-debug.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets-relwithdebinfo.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsTargets.cmake \
+	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsVersionlessTargets.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
 	E:/Qt6/6.7.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake \
@@ -482,4 +546,5 @@ ChatClient_autogen/timestamp: \
 	E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake \
 	E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
 	E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
+	E:/Qt6/Tools/CMake_64/share/cmake-3.30/Modules/SelectLibraryConfigurations.cmake \
 	E:/Qt6/Tools/CMake_64/bin/cmake.exe
