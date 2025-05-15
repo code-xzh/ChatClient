@@ -6,7 +6,7 @@
 */
 //消息转发服务器接口
 syntax = "proto3";
-package bite_im;
+package castle_im;
 import "base.proto";
 
 option cc_generic_services = true;

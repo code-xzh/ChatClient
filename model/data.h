@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QFileInfo>
 
+#include "base.qpb.h"
+
 namespace model{
 
 /////////////////////////////////////////////////////////////////////////
@@ -88,6 +90,22 @@ public:
     QString _desciption="";//签名
     QString _phone="";//电话
     QIcon _avator;//头像
+
+    //从protobuffer中的对象，转换为当前代码的UserInfo对象
+    void load(const castle_im::UserInfo& userInfo)
+    {
+        this->_userId=userInfo.userId();
+        this->_nickname=userInfo.nickname();
+        this->_desciption=userInfo.description();
+        this->_phone=userInfo.phone();
+        if(userInfo.avatar().isEmpty())
+        {
+            //使用默认头像
+            this->_avator=QIcon(":/resource/Image/defaultAvatar.png");
+        }else{
+            this->_avator=makeIcon(userInfo.avatar());
+        }
+    }
 };
 
 /////////////////////////////////////////////////////////////////////////
@@ -128,6 +146,44 @@ public:
         }else{
             //未知消息类型
             return Message();
+        }
+    }
+
+    void load(const castle_im::MessageInfo& messageInfo)
+    {
+        this->_messageId=messageInfo.messageId();
+        this->_chatSessionId=messageInfo.chatSessionId();
+        this->_time=formatTime(messageInfo.timestamp());
+        this->_sender.load(messageInfo.sender());
+
+        //设置消息类型
+        auto type=messageInfo.message().messageType();
+        if(type==castle_im::MessageTypeGadget::MessageType::STRING)
+        {
+            this->_messagetype=TEXT_TYPE;
+            this->_content=messageInfo.message().stringMessage().content().toUtf8();
+        }else if(type==castle_im::MessageTypeGadget::MessageType::IMAGE){
+            this->_messagetype=IMAGE_TYPE;
+            if(messageInfo.message().imageMessage().hasImageContent())
+                this->_content=messageInfo.message().imageMessage().imageContent();
+            if(messageInfo.message().imageMessage().hasFileId())
+                this->_fileId=messageInfo.message().imageMessage().fileId();
+        }else if(type==castle_im::MessageTypeGadget::MessageType::FILE){
+            this->_messagetype=FILE_TYPE;
+            if(messageInfo.message().fileMessage().hasFileContents())
+                this->_content=messageInfo.message().fileMessage().fileContents();
+            if(messageInfo.message().fileMessage().hasFileId())
+                this->_fileId=messageInfo.message().fileMessage().fileId();
+            this->_fileName=messageInfo.message().fileMessage().fileName();
+        }else if(type==castle_im::MessageTypeGadget::MessageType::SPEECH){
+            this->_messagetype=SPEECH_TYPE;
+            if(messageInfo.message().speechMessage().hasFileContents())
+                this->_content=messageInfo.message().speechMessage().fileContents();
+            if(messageInfo.message().speechMessage().hasFileId())
+                this->_fileId=messageInfo.message().speechMessage().fileId();
+        }else{
+            //错误类型
+            LOG()<<"非法的消息类型！type="<<type;
         }
     }
 
@@ -203,6 +259,30 @@ public:
     Message _lastMessage;//最新消息
     QIcon _avator;//头像，对方头像or群聊头像
     QString _userId="";//对方id or ""
+
+    void load(const castle_im::ChatSessionInfo& chatSessionInfo)
+    {
+        this->_chatSessionId=chatSessionInfo.chatSessionId();
+        this->_chatSessionName=chatSessionInfo.chatSessionName();
+        if(chatSessionInfo.hasSingleChatFriendId())
+            this->_userId=chatSessionInfo.singleChatFriendId();
+        if(chatSessionInfo.hasPrevMessage())
+            _lastMessage.load(chatSessionInfo.prevMessage());
+
+        if(chatSessionInfo.hasAvatar()&&!chatSessionInfo.avatar().isEmpty()){
+            this->_avator=makeIcon(chatSessionInfo.avatar());
+        }
+        else{
+            if(_userId!=""){
+                //单聊
+                this->_avator=QIcon(":/resource/Image/defaultAvatar.png");
+            }else{
+                //群聊
+                this->_avator=QIcon(":/resource/Image/groupAvatar.png");
+            }
+        }
+
+    }
 };
 
 }//end model
