@@ -2,7 +2,8 @@
 #define DATACENTER_H
 
 #include <QWidget>
-#include "model/data.h"
+#include "data.h"
+
 
 namespace model {
 
@@ -33,6 +34,15 @@ private:
     QList<Message>* _searchMessageResult=nullptr;//保存历史消息搜索结果
     QString _currentVertifyCodeId;//短信验证码的验证id
 
+public:
+    //初始化数据文件
+    void initDataFile();
+
+    //存储数据到文件中
+    void saveDataFile();
+
+    //从数据文件中加载数据到内存
+    void loadDataFile();
 signals:
 };
 

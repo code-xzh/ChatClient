@@ -42,7 +42,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         loginwidget.h loginwidget.cpp
         phoneloginwidget.h phoneloginwidget.cpp
         toast.h toast.cpp
-        datacenter.h datacenter.cpp
+        model/datacenter.h
+        model/datacenter.cpp
     )
 
   qt_add_protobuf(ChatClient PROTO_FILES ${PB_FILES})
