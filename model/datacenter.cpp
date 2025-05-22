@@ -17,7 +17,7 @@ DataCenter *DataCenter::getInstance()
     return _dataCenter;
 }
 
-DataCenter::DataCenter()
+DataCenter::DataCenter():_netClient(this)
 {
     _memberList=new QHash<QString,QList<UserInfo>>();
     _recentMessages=new QHash<QString,QList<Message>>();

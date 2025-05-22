@@ -4,6 +4,8 @@
 #include <QWidget>
 #include "data.h"
 
+#include "../network/netclient.h"
+
 
 namespace model {
 
@@ -33,6 +35,9 @@ private:
     QList<UserInfo>* _searchUserResult=nullptr;//用户的好友搜索结果
     QList<Message>* _searchMessageResult=nullptr;//保存历史消息搜索结果
     QString _currentVertifyCodeId;//短信验证码的验证id
+
+    //让datacenter持有netclient实例
+    network::NetClient _netClient;
 
 public:
     //初始化数据文件

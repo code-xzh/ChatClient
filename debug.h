@@ -7,4 +7,7 @@
 
 #define TEST_SKIP_LOGIN 0
 
+//测试网络连通性
+#define TEST_NET_CONNECT 1
+
 #endif // DEBUG_H

@@ -4,6 +4,7 @@
 
 #include "loginwidget.h"
 #include "debug.h"
+#include "network/netclient.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,5 +18,11 @@ int main(int argc, char *argv[])
     LoginWidget* loginWidget=new LoginWidget(nullptr);
     loginWidget->show();
 #endif
+
+#if TEST_NET_CONNECT
+    network::NetClient netClient(nullptr);
+    netClient.ping();
+#endif
+
     return a.exec();
 }
