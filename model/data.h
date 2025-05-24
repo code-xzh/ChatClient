@@ -9,6 +9,14 @@
 #include <QFileInfo>
 
 #include "base.qpb.h"
+#include "gateway.qpb.h"
+#include "user.qpb.h"
+#include "friend.qpb.h"
+#include "file.qpb.h"
+#include "notify.qpb.h"
+#include "speech_recognition.qpb.h"
+#include "message_storage.qpb.h"
+#include "message_transmit.qpb.h"
 
 namespace model{
 

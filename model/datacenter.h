@@ -7,6 +7,7 @@
 #include "../network/netclient.h"
 
 
+
 namespace model {
 
 class DataCenter : public QObject
@@ -48,8 +49,33 @@ public:
 
     //从数据文件中加载数据到内存
     void loadDataFile();
+
+    //获取到当前会话登录id
+    const QString& getLoginSessionId() const;
+
+    //验证网络连通性
+    void ping();
+
+    //通过网络获取用户个人信息,该函数是”异步“的函数，发出请求就不管了
+    void getMyselfAsync();
+
+    void resetMyself(std::shared_ptr<castle_im::GetUserInfoRsp> resp);
+
+    UserInfo* getMyself();
+
 signals:
+    void getMyselfDone();
 };
+
+inline const QString &DataCenter::getLoginSessionId() const
+{
+    return _loginSessionId;
+}
+
+inline void DataCenter::ping()
+{
+    _netClient.ping();
+}
 
 }//end model
 

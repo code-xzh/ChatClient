@@ -43,11 +43,11 @@ DataCenter::~DataCenter()
 void DataCenter::initDataFile()
 {
     //构造出文件，使用appData存储文件
-    QString basePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/ChatClient";
-    QString filePath=basePath+"ChatClient.json";
+    QString basePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QString filePath=basePath+"/ChatClient.json";
 
     QDir dir;
-    if(!dir.exists())
+    if(!dir.exists(basePath))
     {
         dir.mkpath(basePath);
     }
@@ -70,10 +70,9 @@ void DataCenter::initDataFile()
 void DataCenter::saveDataFile()
 {
     //构造出文件，使用appData存储文件
-    QString filePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"ChatClient.json";
+    QString filePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/ChatClient.json";
 
-    //把文件创建出来
-    //写方式打开
+
     QFile file(filePath);
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -104,13 +103,13 @@ void DataCenter::saveDataFile()
 void DataCenter::loadDataFile()
 {
     //确保在加载之前，对文件进行初始化
-    QString filePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"ChatClient.json";
+    QString filePath=QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/ChatClient.json";
     QFileInfo fileInfo(filePath);
-    if(fileInfo.exists())
+    if(!fileInfo.exists())
         initDataFile();
 
     QFile file(filePath);
-    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         LOG()<<"打开文件失败！"<<file.errorString();
         return;
@@ -137,6 +136,29 @@ void DataCenter::loadDataFile()
     }
 
     file.close();
+}
+
+void DataCenter::getMyselfAsync()
+{
+    //DataCenter只是负责”处理数据“，网络通信是通过netClient的
+    _netClient.getMyself(_loginSessionId);
+}
+
+void DataCenter::resetMyself(std::shared_ptr<castle_im::GetUserInfoRsp> resp)
+{
+    if(_myself==nullptr)
+    {
+        _myself=new UserInfo();
+    }
+
+    const castle_im::UserInfo& userInfo=resp->userInfo();
+    _myself->load(userInfo);
+
+}
+
+UserInfo *DataCenter::getMyself()
+{
+    return _myself;
 }
 
 }//end model

@@ -7,8 +7,10 @@
 #include "groupsessiondatawidget.h"
 #include "addfrienddialog.h"
 #include "debug.h"
+#include "model/datacenter.h"
 
-#include "debug.h"
+using namespace model;
+
 Widget* Widget::_instance=nullptr;
 Widget* Widget::getInstance()
 {
@@ -196,6 +198,8 @@ void Widget::InitRightWindow()
 
 void Widget::initSignalSlot()
 {
+    model::DataCenter* dataCenter=model::DataCenter::getInstance();
+
     //////////////////////////////////////////////
     /////连接信号槽，处理标签切换
     //////////////////////////////////////////////
@@ -255,6 +259,17 @@ void Widget::initSignalSlot()
         addFriendDialog->exec();//弹出模态对话框
         //selfInfoWidget->show();//弹出非模态对话框
     });
+
+    //////////////////////////////////////////////
+    /////获取个人信息
+    //////////////////////////////////////////////
+    //提供方法
+    connect(dataCenter,&DataCenter::getMyselfDone,this,[=](){
+        //从DataCenter中拿到响应结果的myself,把头像显示出来到界面上
+        auto myself=dataCenter->getMyself();
+        _userAvator->setIcon(myself->_avator);
+    });
+    dataCenter->getMyselfAsync();
 
 }
 
