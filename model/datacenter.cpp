@@ -161,4 +161,40 @@ UserInfo *DataCenter::getMyself()
     return _myself;
 }
 
+void DataCenter::getFriendListAsync()
+{
+    _netClient.getFriendList(_loginSessionId);
+}
+
+void DataCenter::resetFriendList(std::shared_ptr<castle_im::GetFriendListRsp> resp)
+{
+    if(_friendList==nullptr)
+    {
+        _friendList=new QList<UserInfo>();
+    }
+    _friendList->clear();
+
+    QList<castle_im::UserInfo>& friendListPB=resp->friendList();
+    for(auto& f:friendListPB)
+    {
+        UserInfo userInfo;
+        userInfo.load(f);
+        _friendList->push_back(userInfo);
+    }
+}
+
 }//end model
+
+
+
+
+
+
+
+
+
+
+
+
+
+

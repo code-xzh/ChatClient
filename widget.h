@@ -4,8 +4,10 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QLineEdit>
+
 #include "messageshowarea.h"
 #include "messageeditarea.h"
+#include "sessionfriendarea.h"
 
 class Widget : public QWidget
 {
@@ -30,6 +32,8 @@ private:
 
     QLineEdit* _searchEdit;//用户搜索框
     QPushButton* _addFriendBtn;//加好友按钮
+
+    SessionFriendArea* sessionFriendArea;
 
     QPushButton* _extraBtn;//显示会话详情按钮
 
@@ -62,5 +66,7 @@ private:
     void loadSessionList();
     void loadFriendList();
     void loadApplyList();
+
+    void updataFriendList();
 };
 #endif // WIDGET_H

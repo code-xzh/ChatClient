@@ -75,7 +75,7 @@ void Widget::InitLeftWindow()
     _userAvator=new QPushButton();
     _userAvator->setFixedSize(45,45);
     _userAvator->setIconSize(QSize(30,30));
-    _userAvator->setIcon(QIcon(":/resource/Image/defaultAvatar.png"));
+    //_userAvator->setIcon(QIcon(":/resource/Image/defaultAvatar.png"));
     _userAvator->setStyleSheet("QPushButton { background-color : transparent; }");//按钮点击背景色
     layout->addWidget(_userAvator,1,Qt::AlignTop | Qt::AlignHCenter);
 
@@ -127,7 +127,7 @@ void Widget::InitMidWindow()
     style+= "QPushButto::pressed {background-color:rgb(240,240,240);}";
     _addFriendBtn->setStyleSheet(style);
 
-    SessionFriendArea* sessionFriendArea=new SessionFriendArea();
+    sessionFriendArea=new SessionFriendArea();
 
     //控制边距，可以创建空白widget填充到布局管理器中
     QWidget* space1=new QWidget;
@@ -271,6 +271,10 @@ void Widget::initSignalSlot()
     });
     dataCenter->getMyselfAsync();
 
+    //////////////////////////////////////////////
+    /////获取好友列表
+    //////////////////////////////////////////////
+    loadFriendList();
 }
 
 void Widget::switchTatoSession()
@@ -310,19 +314,55 @@ void Widget::switchTatoApply()
     this->loadApplyList();
 }
 
+//加载会话列表
 void Widget::loadSessionList()
 {
 
 }
 
+//加载好友列表
 void Widget::loadFriendList()
+{
+    //好友列表数据是在DataCenter中存储的
+    //如果已经有数据了，直接加载本地数据
+    //否则，从服务器获取
+    DataCenter* dataCenter=DataCenter::getInstance();
+    if(dataCenter->getFriendList()!=nullptr)
+    {
+        //从内存加载数据
+        updataFriendList();
+    }else{
+        //通过第五个参数，使得信号槽只绑定一次
+        connect(dataCenter,&DataCenter::getFriendListDone,this,&Widget::updataFriendList,Qt::UniqueConnection);
+        dataCenter->getFriendListAsync();
+    }
+}
+
+//加载好友申请列表
+void Widget::loadApplyList()
 {
 
 }
 
-void Widget::loadApplyList()
+void Widget::updataFriendList()
 {
+    if(_activetable!=FRIEND_LIST)
+    {
+        //不是好友标签页，就不用渲染任何数据到界面上
+        return;
+    }
 
+    DataCenter* dataCenter=DataCenter::getInstance();
+    QList<UserInfo>* friendList=dataCenter->getFriendList();
+
+    //清空界面之前的数据
+    sessionFriendArea->clear();
+
+    //遍历好友列表，添加到界面上
+    for(const auto& f : *friendList)
+    {
+        sessionFriendArea->addItem(FRIEND_ITEM_TYPE,f._userId,f._avator,f._nickname,f._desciption);
+    }
 }
 
 

@@ -61,7 +61,7 @@ void NetClient::initWebsocket()
     });
 
     //2.和服务器建立连接
-    _websocketClient.open(WEBSOCKET_URL);
+    _websocketClient.open(QUrl(WEBSOCKET_URL));
 }
 
 void NetClient::sendAuth()
@@ -131,6 +131,39 @@ QNetworkReply *NetClient::senHttpRequest(const QString &apiPath, const QByteArra
 
     QNetworkReply* httpResp=_httpClient.post(httpReq,body);
     return httpResp;
+}
+
+void NetClient::getFriendList(const QString &loginSessionId)
+{
+    //1.通过protobuf构造body
+    castle_im::GetFriendListReq req;
+    req.setRequestId(makeRequestId());
+    req.setSessionId(loginSessionId);
+    QByteArray body=req.serialize(&_serializer);
+    LOG()<<"获取好友列表 发送请求 requestId="<<req.requestId()<<",loginSessionId="<<req.sessionId();
+
+    //2.发送http请求
+    QNetworkReply* httpResp=this->senHttpRequest("/service/friend/get_friend_list",body);
+
+    //3.处理响应
+    connect(httpResp,&QNetworkReply::finished,this,[=](){
+        bool ok=false;
+        QString reason;
+        auto friendListResp=this->handleHttpResponse<castle_im::GetFriendListRsp>(httpResp,&ok,&reason);
+
+        //判断相应是否正确
+        if(!ok)
+        {
+            LOG()<<"获取好友列表 失败！ requestId="<<req.requestId()<<",reason="<<reason;
+            return;
+        }
+
+        //把结果保存到DataCenter中
+        _dataCenter->resetFriendList(friendListResp);
+
+        //发送信号，通知完成
+        emit _dataCenter->getFriendListDone();
+    });
 }
 
 }//end network

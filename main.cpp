@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 
 #if TEST_NET_CONNECT
     model::DataCenter* dataCenter=model::DataCenter::getInstance();
+    //dataCenter->saveDataFile();
     dataCenter->ping();
 #endif
 

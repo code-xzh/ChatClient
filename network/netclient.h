@@ -62,7 +62,7 @@ public:
         std::shared_ptr<T> respObj=std::make_shared<T>();
         respObj->deserialize(&_serializer,respBody);
 
-        //4判定业务上是否出错，//会出错，json解析错误，涉及到savafile
+        //4判定业务上是否出错
         if(!respObj->success())
         {
             *ok=false;
@@ -76,6 +76,8 @@ public:
         *ok=true;
         return respObj;
     }
+
+    void getFriendList(const QString& loginSessionId);
 
 private:
     model::DataCenter* _dataCenter;

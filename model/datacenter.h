@@ -63,8 +63,19 @@ public:
 
     UserInfo* getMyself();
 
+    QList<UserInfo>* getFriendList()
+    {
+        return _friendList;
+    }
+
+    //通过网络获取好友列表
+    void getFriendListAsync();
+
+    void resetFriendList(std::shared_ptr<castle_im::GetFriendListRsp> resp);
+
 signals:
     void getMyselfDone();
+    void getFriendListDone();
 };
 
 inline const QString &DataCenter::getLoginSessionId() const
